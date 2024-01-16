@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonepe</title>
+    <link rel="stylesheet" href="phonepe.css">
+</head>
+<body>
+    <div id="main">
+        <div id="pic">
+            <img src="https://cdn.worldvectorlogo.com/logos/phonepe-1.svg" alt="Phonepe png.">
+        </div>
+        <div id="main2">
+            <p class="availabelbala">Amount<br><span id=rs>Rs.500</span></p>
+            <form id="form">
+                <label for="cardnum">Card Number</label>
+                <input type="number" id="cardnumber" placeholder="Enter your card number" required>
+                <label for="expirydate">Expire Date</label>
+                <input type="text" id="expirydate" placeholder="MM/YY" required>
+                <label for="CVV">CVV</label>
+                <input type="number" id="cvvnum" placeholder="Enter CVV" required>
+                <button type="submit" class="submit">Payment</button>
+            </form>
+            <button id="valid" >Valid<br><span class="details">details</span></button>
+            <button id="invalid">Invalid<br><span class="details">details</span></button>
+        </div>
+<!------------------------------Payment processing Page----------------------------->
+        <div id="loading_page">
+            <h2 class="processing">Payment processing</h2>
+            <div class="loader"></div>
+            <p id="waiting_msg">Transaction is being process please wait</p>
+        </div>
+
+<!------------------------------Transaction complete page-------------------------->
+        <div id="transaction_complete">
+            <div class="tick_icon_border">
+            <div class="tick_icon">
+                <img src="https://em-content.zobj.net/source/skype/289/check-mark_2714-fe0f.png" alt="green tick">
+            </div>
+            </div>
+            <h1 class="sucessful_msg">Transaction Sucessful</h1>
+            <p class="thanku_msg">Thank you</p>
+            <button type="menu" class="backtohome">Back To Home</button>
+        </div>
+<!------------------------------Transaction failed page----------------------------->
+        <div id="transaction_failed">
+            <div class="failed_icon_border">
+                <img class="failed_img" src="https://em-content.zobj.net/source/telegram/386/exclamation-mark_2757.webp" alt="red exclamation mark">
+            </div>
+            <h1 class="failed_msg">Transaction Failed</h1>
+            <p class="sorry">Sorry,<span id="word"> your transaction couldn't be completed</span></p>
+            <button type="menu" class="backhome">Back To Home</button>
+        </div>
+       
+</body>
+<script src="phonepe.js"></script>
+</html>
